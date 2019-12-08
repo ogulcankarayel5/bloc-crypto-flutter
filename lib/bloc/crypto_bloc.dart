@@ -24,5 +24,14 @@ class CryptoBloc extends Bloc<CryptoEvent, CryptoState> {
         yield CryptoErrorState(error: e.toString());
       }
     }
+    else if(event is RefreshCryptoEvent){
+      try{
+        final Crypto crypto = await _cryptoRepository.getWeather();
+        yield CryptoLoadedState(crypto: crypto);
+      }catch(e){
+        yield CryptoErrorState(error: e.toString());
+
+      }
+    }
   }
 }

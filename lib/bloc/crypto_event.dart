@@ -11,3 +11,10 @@ class FetchCryptoEvent extends CryptoEvent{
   List<Object> get props => null;
 
 }
+
+class RefreshCryptoEvent extends CryptoEvent{
+  @override
+  // TODO: implement props
+  List<Object> get props => null;
+
+}
