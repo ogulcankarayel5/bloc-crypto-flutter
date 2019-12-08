@@ -32,9 +32,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    new Timer(new Duration(milliseconds: 200), () {
-    checkFirstSeen();
-    });
+   
   }
 
   @override
